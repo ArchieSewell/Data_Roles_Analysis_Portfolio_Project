@@ -50,3 +50,51 @@ The Results and Analyses above suggest the following: \
 Data Analysts focus on data querying, reporting, and visualisation, with strong skills in SQL, Excel, and tools like Power BI and Tableau.
 Data Engineers are heavily involved in building and managing data infrastructure, requiring strong SQL, Python, and cloud platform skills (Azure, AWS), as well as knowledge of big data tools like Spark.
 Data Scientists emphasize data analysis, machine learning, and statistical modeling, with Python being paramount, supported by SQL, R, and some cloud platform knowledge.
+
+## 2. How are the most in-demand skills for Data Analysts in the UK trending over time?
+
+### Visualise Data
+
+```python
+
+sns.lineplot(data=df_plot, dashes=False, palette='tab10')
+sns.set_theme(style="ticks")
+sns.despine()
+
+plt.title('Trend of Top Skills for Data Analysts over time in the UK')
+plt.ylabel('Likelihood of Skill Appearing in Job Posting')
+plt.xlabel('2023')
+plt.legend().remove()
+
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+from adjustText import adjust_text
+texts = []
+for i in range(desired_value_no):
+    text = plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i]) 
+    texts.append(text)
+
+adjust_text(texts)
+plt.show()
+
+```
+
+### Results
+
+![Trending Skills for Data Analysts in the UK over time](3_Project\images\da_skills_temporal.png)
+
+### Insights
+
+- Excel and SQL are the most requested skills overall for Data Analysts in the UK, with both consistently appearing in over 40% of job postings throughout 2023. Excel maintained a steady presence, slightly leading over SQL in the latter part of the year. This trend highlights the critical importance of these skills in data manipulation and database management tasks typical for data analyst roles.
+- Power BI and Python exhibit notable fluctuations in demand over the year. Power BI saw a significant increase, particularly from June to September, possibly reflecting the growing emphasis on data visualisation and business intelligence. Python also showed a spike in August, which may correlate with the release of new graduate roles. These positions often prioritise programming skills such as Python, given its versatility and widespread use in data analysis and automation.
+- Tableau, while also important for data visualisation, shows a relatively stable but lower demand compared to Power BI. This might indicate a preference in the job market for Power BI over Tableau, or it could reflect organisational tool preferences and market trends.
+- The spike in August across multiple skills could be attributed to a seasonal influx of job postings targeting recent graduates. New graduates are typically proficient in skills taught in academic settings, such as Python, which aligns with the observed increase in demand during this period.
+
+### Summary
+
+Data Analysts in the UK consistently need strong skills in Excel and SQL for core data tasks such as querying, reporting, and database management. Power BI and Python are also increasingly important, reflecting a growing need for data visualisation and programming capabilities. The seasonal spike in skill demand during August likely aligns with the job market's intake of new graduates, who bring current, academic knowledge of tools like Python. Tableau remains a relevant skill, though slightly less in demand compared to Power BI, possibly due to differing market and organisational tool preferences. \
+The graph essentially reinforces the idea that learning these skills would still be beneficial in the workplace for a Data Analyst, at least for the time being. If we were to see a general decline over the course of the year, it would suggest that associated skill is being phased out. It may be interesting to see more data on this, as over a longer time span trends may become more apparant.
+
+## 3.
