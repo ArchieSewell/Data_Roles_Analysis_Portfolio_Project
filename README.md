@@ -101,4 +101,55 @@ plt.show()
 Data Analysts in the UK consistently need strong skills in Excel and SQL for core data tasks such as querying, reporting, and database management. Power BI and Python are also increasingly important, reflecting a growing need for data visualisation and programming capabilities. The seasonal spike in skill demand during August likely aligns with the job market's intake of new graduates, who bring current, academic knowledge of tools like Python. Tableau remains a relevant skill, though slightly less in demand compared to Power BI, possibly due to differing market and organisational tool preferences. \
 The graph essentially reinforces the idea that learning these skills would still be beneficial in the workplace for a Data Analyst, at least for the time being. If we were to see a general decline over the course of the year, it would suggest that associated skill is being phased out. It may be interesting to see more data on this, as over a longer time span trends may become more apparant.
 
-## 3.
+## 3. What are the trends in salary for Data Roles in the UK?
+
+To find how well data roles pay in the UK, I filtered jobs for only in the UK, and selected the top 6 roles by count. I then made sure to sort by their medians to ensure a clear and visually appealing set of boxplots. Overall this was the easiest piece of analysis to complete, yet it still provides some valuable insights.
+
+View my notebook that outlines all the steps I took, with all comments intact:  [4_salary_analysis.ipynb](3_Project\4_salary_analysis_uk.ipynb)
+
+### Visualise Data
+```python
+sns.boxplot(data=df_uk_top, x='salary_year_avg', y='job_title_short', order=job_order)
+sns.set_theme(style="ticks")
+
+plt.title('Salary Distribution in the United Kingdom')
+plt.xlabel('Yearly Salary (£GBP)')
+plt.ylabel('')
+ax = plt.gca()
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'£{int(x/1000)}K'))
+plt.show()
+```
+
+### Results
+![Salary Distributions of Data Roles in the UK](3_Project\images\salary_dist_uk.png)
+
+### Insights
+
+- Senior Data Scientists command the highest salaries among the roles presented, with a wide interquartile range (IQR) indicating significant variation in pay. The median salary is high, reflecting the advanced skills and experience required for this role. The range extends from approximately £75K to over £175K, suggesting that the top earners in this position are very well compensated.
+
+- Data Engineers have a relatively broad salary distribution, with their IQR indicating moderate variation in compensation. The median salary is around the £75K mark, with the range extending from about £50K to just over £125K. This spread highlights the demand for professionals who can build and manage complex data infrastructure.
+
+- Data Scientists show a slightly narrower salary range compared to Data Engineers but still enjoy a substantial median salary around £75K. The distribution spans from approximately £50K to £125K, indicating a strong demand for skills in data analysis, machine learning, and statistical modeling.
+
+- Data Analysts have the lowest median salary among the roles analysed, around £50K. The range is narrower, extending from approximately £25K to £75K, which aligns with the less technical but critical role they play in data querying, reporting, and visualisation.
+
+- There is very limited data for the 'Senior Data Analyst' and 'Senior Data Engineer' roles, which precludes a detailed analysis. Their inclusion is intended to highlight the need for more data to provide a comprehensive salary analysis and to facilitate comparisons.
+
+- To supplement this analysis, we will examine salary distributions for these roles in the US, where data is more abundant. This comparison will offer insights into global trends and highlight differences in compensation across regions.
+
+### Performing the same analysis on US data
+
+Following all the steps laid out above on data from the United States leads to the following results:
+![Salary Distributions of Data Roles in the US](3_Project\images\salary_dist_us.png)
+
+At first look, we can see that there are a lot more outliers included in the plots, but as box plots are, by definition, inclusive of 50% of their data within their IQRs, this is simply due to the far greater amount of data available in the US. \
+Interestingly, In the US Senior Data Analysts are, on average, compensated less than that of non-senior data science and engineering roles. This suggests that a data analyst deciding whether to pursue a senior role, should perhaps instead progress into engineering or science instead. \
+As expected, Senior Data Scientists and Engineers are paid highest on average, which reflects the strong technical skills and years experience needed to succeed in the roles. \
+In general, salaries are higher in the US (this plot still uses £GBP as currency for the sake of consistency), which again is consistent with other data sources.
+
+Overall, the analysis highlights that Senior Data Scientists have the highest and most variable salaries, reflecting their advanced skills and experience. Data Engineers and Data Scientists also enjoy substantial median salaries, indicating strong demand for their expertise. Data Analysts earn the lowest median salary, consistent with their less technical role.
+
+Limited data on 'Senior Data Analyst' and 'Senior Data Engineer' roles suggests the need for more comprehensive information. US data shows higher overall salaries and reinforces the trend that advanced technical roles command higher pay. Future analyses would benefit from a more extensive data set in the UK, particularly for senior positions.
+
+## 4. How do skills affect the median salary of a Data Analyst in the UK?
+
