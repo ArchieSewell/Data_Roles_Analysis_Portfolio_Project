@@ -87,7 +87,7 @@ plt.show()
 
 ### Results
 
-![Trending Skills for Data Analysts in the UK over time](Python_Data_Project\3_Project\images\da_skills_temporal.png)
+![Trending Skills for Data Analysts in the UK over time](3_Project\images\da_skills_temporal.png)
 
 ### Insights
 
