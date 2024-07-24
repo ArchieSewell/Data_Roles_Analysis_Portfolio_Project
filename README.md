@@ -53,6 +53,10 @@ Data Scientists emphasize data analysis, machine learning, and statistical model
 
 ## 2. How are the most in-demand skills for Data Analysts in the UK trending over time?
 
+To find the trend of in-demand skills for Data Analysts over the course of 2023, I aggregated the UK Data Analyst data on a monthly basis, and created a new row for each skill in my data frame. I then converted to a pivot table, and took each mentioned skill as a fraction of the total job postings, to find the percentage of which each skill was mentioned. I took some steps to further clean up the data, and converted the month column from an integer value to abbreviations of the months string. From this I plotted the results using Seaborn, and formatted the graph for both visual clarity and aesthetics.
+
+View my notebook that outlines all the steps I took, with all comments intact:  [3_skills_trend.ipynb](3_Project\3_skills_trend.ipynb)
+
 ### Visualise Data
 
 ```python
