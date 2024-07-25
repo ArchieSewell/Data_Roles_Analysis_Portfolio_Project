@@ -5,7 +5,7 @@
 To find the most demanded skills for the top 3 data roles, I filtered out the positions with the highest count in my dataset, and got the top 5 skills mentioned for the top 3 roles. \
 This showcases some valuable insights on what skills to focus on depending on the targetted role, alongside the financial compensation that can be expected upon using the skill.
 
-View my notebook that outlines all the steps I took, with all comments intact:  [2_skills_demanded.ipynb](3_Project\2_skills_demand.ipynb)
+View my notebook that outlines all the steps I took, with all comments intact:  [2_skills_demanded.ipynb](3_Project/2_skills_demand.ipynb)
 
 ### Visualise Data
 ```python
