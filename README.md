@@ -1,4 +1,29 @@
+# Overview
+Welcome to my analysis on the data job market, focusing on data analyst roles in the UK. This project aims to provide some insight into some of the key skills that are used in the data industry, and how well each skill / role is generally compensated. \
+The overall purpose of this project is to be presented in my portfolio, so I tried to showcase a range visualisation skills using Python, and escpecially Pandas. \
+Credit to lukebarousse on Hugging Face for the [dataset](https://huggingface.co/datasets/lukebarousse/data_jobs).
+
+
+# The Questions
+
+1. What are the most demanded skills for the top 3 most popular data roles?
+2. How are the most in-demand skills for Data Analysts in the UK trending over time?
+3. What are the trends in salary for Data Roles in the UK?
+4. How do skills affect the median salary of a Data Analyst in the UK?
+5. What are the most optimal skills to learn for Data Analysts in the UK?
+
+# Tools & Technologies Used
+- **Python**: All conding and analysis was done inside Python. I also used Python libraries including but not limited to:
+    - **Pandas**: Used to analyse the data.
+    - **Matplotlib**: Visualised some of the data.
+    - **Seaborn**: Created the more advanced visuals.
+- **Jupyter notebooks**: All code was completed inside of Jupyter notebooks, and all are available inside this repository (including comments to explain my work).
+- **Visual Studio Code**: My personal favourite IDE.
+- **Git & GitHub**: Used to share my work!
+
 # The Analysis
+
+Each Jupyter notebook aims to tackle one of the above mentioned questions. Access to each full notebook is available, and exploratory analysis is completed below. 
 
 ## 1. What are the most demanded skills for the top 3 most popular data roles?
 
@@ -200,7 +225,7 @@ plt.show()
 
 Data Analysts in the UK should focus on developing a blend of high-paying technical skills and in-demand basic skills to maximize their marketability and salary potential. While expertise in cloud computing and big data technologies can lead to higher salaries, proficiency in essential tools like Tableau and SQL remains crucial for securing job opportunities.
 
-## 5. What are the most optimal skills to learn for Data Analysts?
+## 5. What are the most optimal skills to learn for Data Analysts in the UK?
 
 
 View my notebook that outlines all the steps I took, with all comments intact: [7_optimal_skills.ipynb](3_Project/7_optimal_skills.ipynb)
@@ -253,5 +278,28 @@ sns.scatterplot(
 ### Summary
 
 For Data Analysts in the UK, a strategic approach to skill development is crucial. Focusing on high-value, high-demand skills like SQL and Python can significantly enhance employability and earning potential. Simultaneously, developing expertise in specialised and cloud-based technologies can provide a competitive edge and open opportunities for higher-paying roles.
+
+## Reflection
+Through completing this project, I deepened my understanding of the data job market in the UK. As a recent university graduate trying to get involved in the Data Analysis sector, I learned about what skills to focus on learning and improving. Completion of this project steered me towards strengthening my SQL skills and knowledge. Once I am comfortable, I will aim to add a SQL project to my portfolio. \
+I am currently undertaking an internship at the UK Space Agency, as a research intern, and I hope that some of the skills that I practised during this project will allow me to perform similar analysis on the work I am doing. Perhaps in the coming weeks I will add a project that details the work being done there, as I am sure there will be opportunity for data analysis. 
+- I gained an appreciation for how certain libraries such as Seaborn and Pandas make data analysis far easier. There were instances in my code where I intentionally used Matplotlibs base library to analyse and plot data, but this would have been much less efficient for the more complex tasks. 
+- I learned that the thorough cleaning of data and data preparation are key when performing analysis. Not only is it completely necessary to avoid errors / incorrect data in some cases, but it saves time in the long run if working with the same dataset for an extended period.
+- As mentioned, I learned that aligning the skills that an aspiring Data Analyst is learning with what the market is demanding / paying is crucial. I feel this has allowed me to make a far more strategic career plan moving forward.
+
+## Challenges I Faced
+As expected, certain challenges arose during the completion of this project, but I take great pride in my determination to overcome, inside and outside of coding. These challenges provided excellent learning opportunities:
+- **Data Inconsistencies**: Handling inconsistent data requires particular care in order to avoid errors or inaccurate data. Some of the original plots that I generated had wild anomalies which I had to resolve. I had to learn certain new data cleaning techniques in order to maintain the integrity of the data.
+- **Complex Data Visualisation**: Deciding on the most effective way of representing data without repeating myself (I wanted each plot to be different from the others as this is a portfolio project after all). I spent a lot of time looking over the Pandas and Seaborn documentation to find the perfect tools to use to most effectively analyse and plot the data I wanted. Because of this, I feel far more comfortable using the documentation and using unfamiliar tools, so I feel that if a similar situation were to arise in which I did not know how best to analyse / represent the data, I would know where to look.
+- **Deciding how in-depth to go**: The dataset I used was somewhat limited on the UK job market, but I wanted to make sure to analyse the UK data as it as relevant to my situation; and potentially interesting to employers. Because of this, there were certain pieces of analysis that I did not feel comfortable going into, as I did not feel it would have been truly reflective of the actual job market. This is mentioned to an extent within the boxplot section, as I did want to highlight this in my analysis.
+
+## Conclusion
+Overall, the project was a great success, having answered all the set questions. I gained valuable insights into the UK Data Analyst job market, and learned information that I am actually applying myself; being choosing to focus on SQL and Python moving forward, whereas I previously mainly used R. \
+I learned a great deal during the project, and now feel far more comfortable with using Pandas and Seaborn, as well as Git/ GitHub (This is my first uploaded piece of work on GitHub). Moving forward, I want to complete another piece of data analysis on Spotify data, as I feel I can make more use of Python and its libraries whilst performing analysis on a completely different topic. In the future, I would like to complete a project using SQL as I now know that SQL is the most mentioned skill in UK Data Analyst Job Postings.
+If I were to repeat / come back to the project, I would choose a dataset that was more focused on UK data, as this would provide more freedom of analysis, and perhaps give a more true representation of the UK job market.
+
+## Thank you
+Thank you for checking out my project. My background is in Physics, so most coding is self taught outside of the Python and R modules I completed at university. If you have any feedback please let me know.
+
+Archie Sewell
 
 
