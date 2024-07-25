@@ -138,7 +138,7 @@ plt.show()
 
 ### Performing the same analysis on US data
 
-Following all the steps laid out above on data from the United States leads to the following results:
+Following all the steps laid out above on data from the United States leads to the following results: \
 Full notebook available here: [5_salary_analysis_us](3_Project/5_salary_analysis_us.ipynb) \
 ![Salary Distributions of Data Roles in the US](3_Project/images/salary_dist_us.png)
 
