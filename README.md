@@ -54,7 +54,7 @@ Data Scientists emphasize data analysis, machine learning, and statistical model
 
 To find the trend of in-demand skills for Data Analysts over the course of 2023, I aggregated the UK Data Analyst data on a monthly basis, and created a new row for each skill in my data frame. I then converted to a pivot table, and took each mentioned skill as a fraction of the total job postings, to find the percentage of which each skill was mentioned. I took some steps to further clean up the data, and converted the month column from an integer value to abbreviations of the months string. From this I plotted the results using Seaborn, and formatted the graph for both visual clarity and aesthetics.
 
-View my notebook that outlines all the steps I took, with all comments intact:  [3_skills_trend.ipynb](3_Project\3_skills_trend.ipynb)
+View my notebook that outlines all the steps I took, with all comments intact:  [3_skills_trend.ipynb](3_Project/3_skills_trend.ipynb)
 
 ### Visualise Data
 
@@ -86,7 +86,7 @@ plt.show()
 
 ### Results
 
-![Trending Skills for Data Analysts in the UK over time](3_Project\images\da_skills_temporal.png)
+![Trending Skills for Data Analysts in the UK over time](3_Project/images/da_skills_temporal.png)
 
 ### Insights
 
@@ -104,7 +104,7 @@ The graph essentially reinforces the idea that learning these skills would still
 
 To find how well data roles pay in the UK, I filtered jobs for only in the UK, and selected the top 6 roles by count. I then made sure to sort by their medians to ensure a clear and visually appealing set of boxplots. Overall this was the easiest piece of analysis to complete, yet it still provides some valuable insights.
 
-View my notebook that outlines all the steps I took, with all comments intact:  [4_salary_analysis.ipynb](3_Project\4_salary_analysis_uk.ipynb)
+View my notebook that outlines all the steps I took, with all comments intact:  [4_salary_analysis.ipynb](3_Project/4_salary_analysis_uk.ipynb)
 
 ### Visualise Data
 ```python
@@ -120,7 +120,7 @@ plt.show()
 ```
 
 ### Results
-![Salary Distributions of Data Roles in the UK](3_Project\images\salary_dist_uk.png)
+![Salary Distributions of Data Roles in the UK](3_Project/images/salary_dist_uk.png)
 
 ### Insights
 
@@ -139,7 +139,8 @@ plt.show()
 ### Performing the same analysis on US data
 
 Following all the steps laid out above on data from the United States leads to the following results:
-![Salary Distributions of Data Roles in the US](3_Project\images\salary_dist_us.png)
+Full notebook available here: [5_salary_analysis_us](3_Project/5_salary_analysis_us.ipynb)
+![Salary Distributions of Data Roles in the US](3_Project/images/salary_dist_us.png)
 
 At first look, we can see that there are a lot more outliers included in the plots, but as box plots are, by definition, inclusive of 50% of their data within their IQRs, this is simply due to the far greater amount of data available in the US. \
 Interestingly, In the US Senior Data Analysts are, on average, compensated less than that of non-senior data science and engineering roles. This suggests that a data analyst deciding whether to pursue a senior role, should perhaps instead progress into engineering or science instead. \
