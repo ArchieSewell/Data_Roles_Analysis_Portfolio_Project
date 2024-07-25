@@ -37,7 +37,7 @@ plt.show()
 
 ### Results 
 
-![Visualisation of Most Demanded Skills for Data roles](3_Project\images\skill_demand_3_data_roles.png)
+![Visualisation of Most Demanded Skills for Data roles](3_Project/images/skill_demand_3_data_roles.png)
 
 ### Insights
 
