@@ -138,8 +138,10 @@ plt.show()
 
 ### Performing the same analysis on US data
 
-Following all the steps laid out above on data from the United States leads to the following results:
-![Salary Distributions of Data Roles in the US](3_Project\images\salary_dist_us.png)
+Following all the steps laid out above on data from the United States leads to the following results: \
+View my notebook that outlines all the steps I took, with all comments intact:
+[5_salary_analysis_us.ipynb](3_Project\5_salary_analysis_us.ipynb)
+![Salary Distributions of Data Roles in the US](3_Project/images/salary_dist_us.png)
 
 At first look, we can see that there are a lot more outliers included in the plots, but as box plots are, by definition, inclusive of 50% of their data within their IQRs, this is simply due to the far greater amount of data available in the US. \
 Interestingly, In the US Senior Data Analysts are, on average, compensated less than that of non-senior data science and engineering roles. This suggests that a data analyst deciding whether to pursue a senior role, should perhaps instead progress into engineering or science instead. \
@@ -151,4 +153,81 @@ Overall, the analysis highlights that Senior Data Scientists have the highest an
 Limited data on 'Senior Data Analyst' and 'Senior Data Engineer' roles suggests the need for more comprehensive information. US data shows higher overall salaries and reinforces the trend that advanced technical roles command higher pay. Future analyses would benefit from a more extensive data set in the UK, particularly for senior positions.
 
 ## 4. How do skills affect the median salary of a Data Analyst in the UK?
+
+To find the top paying skills for Data Analysts, I began by filtering the dataset to only add Data Analyst roles in the UK to my data frame. I then summed all the skills and sorted by their median salaries, ensuring to remove anomalous data; which I defined to be skills that were mentioned less than 3 times in all postings. I then sorted the same data by count (or how many times each skill was mentioned in the data frame) to find the most desired skills. Finally I plotted these as a pair of bar charts on the same set of axes, as I decided this would be the clearest way of depicting the data. \
+View my notebook that outlines all the steps I took, with all comments intact:
+[6_skills_salary.ipynb](3_Project/6_skills_salary.ipynb)
+
+### Remove Outliers
+```python
+df_da_top_pay = (df_da_uk.groupby('job_skills')['salary_year_avg']
+                 .agg(['count', 'median'])
+                 .query('count >= 3')  # keep only skills with 3 or more counts
+                 .sort_values(by='median', ascending=False)
+                 .head(10))
+```
+### Visualise Data
+```python
+fig, ax = plt.subplots(2, 1)
+
+sns.barplot(data=df_da_top_pay, x='median', y=df_da_top_pay.index, ax=ax[0], hue='median', palette='dark:b_r')
+
+sns.barplot(data=df_da_top_skills, x='median', y=df_da_top_skills.index, ax=ax[1], hue='median', palette='light:b')
+
+plt.show()
+```
+
+### Results
+![The effect of Skills on Data Analyst Salaries UK](3_Project/images/skills_effect_salaries_uk.png)
+
+### Insights
+
+### Summary
+
+## 5. What are the most optimal skills to learn for Data Analysts?
+
+
+View my notebook that outlines all the steps I took, with all comments intact: [7_optimal_skills.ipynb](3_Project/7_optimal_skills.ipynb)
+### Create a list of technologies that encompasses each skill
+
+```python
+df_tech = df['job_type_skills'].drop_duplicates().dropna().copy()
+
+tech_dict = {}
+for row in df_tech:
+    row_dict = ast.literal_eval(row)
+    for key, value in row_dict.items():
+        if key in tech_dict:
+            tech_dict[key] += value
+        else:                
+            tech_dict[key] = value
+
+for key, value in tech_dict.items():
+    tech_dict[key] = list(set(value))
+```
+
+### Visualise Data
+```python
+sns.scatterplot(
+    data=df_plot,
+    x='skill_percent',
+    y='median_salary',
+    hue='Technology'
+)
+```
+
+### Results
+
+![Scatterplot skills for Data Analysts Uk](3_Project/images/optimal_skills_da_uk.png)
+
+### Insights
+
+
+
+### Summary
+
+
+
+## Conclusion
+
 
