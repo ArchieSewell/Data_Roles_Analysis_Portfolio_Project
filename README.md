@@ -143,11 +143,12 @@ Full notebook available here: [5_salary_analysis_us](3_Project/5_salary_analysis
 
 ![Salary Distributions of Data Roles in the US](3_Project/images/salary_dist_us.png)
 
-At first look, we can see that there are a lot more outliers included in the plots, but as box plots are, by definition, inclusive of 50% of their data within their IQRs, this is simply due to the far greater amount of data available in the US. \
-Interestingly, In the US Senior Data Analysts are, on average, compensated less than that of non-senior data science and engineering roles. This suggests that a data analyst deciding whether to pursue a senior role, should perhaps instead progress into engineering or science instead. \
-As expected, Senior Data Scientists and Engineers are paid highest on average, which reflects the strong technical skills and years experience needed to succeed in the roles. \
-In general, salaries are higher in the US (this plot still uses £GBP as currency for the sake of consistency), which again is consistent with other data sources.
+- At first look, we can see that there are a lot more outliers included in the plots, but as box plots are, by definition, inclusive of 50% of their data within their IQRs, this is simply due to the far greater amount of data available in the US. 
+- Interestingly, In the US Senior Data Analysts are, on average, compensated less than that of non-senior data science and engineering roles. This suggests that a data analyst deciding whether to pursue a senior role, should perhaps instead progress into engineering or science instead. 
+- As expected, Senior Data Scientists and Engineers are paid highest on average, which reflects the strong technical skills and years experience needed to succeed in the roles. 
+- In general, salaries are higher in the US (this plot still uses £GBP as currency for the sake of consistency), which again is consistent with other data sources.
 
+### Summary
 Overall, the analysis highlights that Senior Data Scientists have the highest and most variable salaries, reflecting their advanced skills and experience. Data Engineers and Data Scientists also enjoy substantial median salaries, indicating strong demand for their expertise. Data Analysts earn the lowest median salary, consistent with their less technical role.
 
 Limited data on 'Senior Data Analyst' and 'Senior Data Engineer' roles suggests the need for more comprehensive information. US data shows higher overall salaries and reinforces the trend that advanced technical roles command higher pay. Future analyses would benefit from a more extensive data set in the UK, particularly for senior positions.
@@ -182,7 +183,22 @@ plt.show()
 
 ### Insights
 
+- The top-paying skills are predominantly technical and cloud-based. Skills like AWS, MySQL, and SQL Server command the highest salaries, reflecting the premium placed on expertise in cloud computing, database management, and data engineering. These skills are essential for managing large-scale data operations, optimising data workflows, and ensuring efficient data storage and retrieval, which are critical in today's data-driven environments.
+
+- Other high-paying skills such as Flow, Hadoop, and Oracle further highlight the demand for proficiency in big data technologies and advanced data processing frameworks. These technologies are vital for handling complex data analytics tasks, making them valuable in the job market.
+
+- The most in-demand skills, like Tableau and SQL, are fundamental tools used in everyday data analysis tasks. Tableau's prominence underscores the importance of data visualisation in making data insights accessible and actionable for businesses. SQL's strong demand highlights its critical role in querying and managing relational databases.
+
+- Other frequently requested skills, including Looker, Python, and Power BI, emphasise the market's need for versatile data analysis and visualisation capabilities. Python's popularity is particularly notable due to its wide application in data analysis, automation, and machine learning, making it an essential skill.
+
+
+- The discrepancy between the highest-paid and most in-demand skills suggests a market dynamic where more technical and cloud-based skills are highly valued and command higher salaries. This trend is driven by the growing complexity of data ecosystems and the need for advanced technical skills to manage and extract insights from large and varied datasets.
+
+- Basic skills like Outlook and Excel, while still important, do not command as high salaries. These skills are more ubiquitous and less specialised, reflecting their foundational role in data analysis tasks but not necessarily driving high salaries.
+
 ### Summary
+
+Data Analysts in the UK should focus on developing a blend of high-paying technical skills and in-demand basic skills to maximize their marketability and salary potential. While expertise in cloud computing and big data technologies can lead to higher salaries, proficiency in essential tools like Tableau and SQL remains crucial for securing job opportunities.
 
 ## 5. What are the most optimal skills to learn for Data Analysts?
 
@@ -222,12 +238,20 @@ sns.scatterplot(
 
 ### Insights
 
+- Skills like SQL Server and Flow appear in fewer job postings but command higher salaries. These skills are more specialised, often requiring deeper technical knowledge and experience, thus earning a premium in the job market. Their relative scarcity among job postings suggests that professionals with these skills can leverage their expertise for higher compensation.
 
+- SQL and Python stand out as both highly demanded and highly paid skills. These are fundamental in data analytics for their versatility and wide application in database management and programming. Their high demand is reflected in the substantial percentage of job postings requiring these skills, indicating their critical importance in the field.
+
+- Excel and Tableau, while appearing frequently in job postings, do not command the highest salaries. These tools are essential for data analysis and visualisation, making them common in job requirements. However, their widespread use and accessibility result in lower salary premiums compared to more specialised technical skills.
+
+
+- Looker, Azure, and Power BI represent specialised analyst tools and cloud technologies that are moderately demanded and offer competitive salaries. The increasing adoption of cloud solutions and business intelligence tools drives the demand for these skills, highlighting the importance of cloud competency in modern data analytics roles.
+
+
+- Outlook, Word, and Sheets appear on the lower end of both salary and demand scales. These basic productivity tools are essential for general business operations but do not significantly influence the salary prospects for data analysts. Their prevalence in job postings underscores their necessity but also their limited impact on compensation.
 
 ### Summary
 
-
-
-## Conclusion
+For Data Analysts in the UK, a strategic approach to skill development is crucial. Focusing on high-value, high-demand skills like SQL and Python can significantly enhance employability and earning potential. Simultaneously, developing expertise in specialised and cloud-based technologies can provide a competitive edge and open opportunities for higher-paying roles.
 
 
