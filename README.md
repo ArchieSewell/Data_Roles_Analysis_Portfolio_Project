@@ -13,7 +13,7 @@ Credit to lukebarousse on Hugging Face for the [dataset](https://huggingface.co/
 5. What are the most optimal skills to learn for Data Analysts in the UK?
 
 # Tools & Technologies Used
-- **Python**: All conding and analysis was done inside Python. I also used Python libraries including but not limited to:
+- **Python**: All coding and analysis was done inside Python. I also used Python libraries including but not limited to:
     - **Pandas**: Used to analyse the data.
     - **Matplotlib**: Visualised some of the data.
     - **Seaborn**: Created the more advanced visuals.
